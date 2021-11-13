@@ -1,13 +1,23 @@
 // 209193481 Sivan Jhirad
 
 #include "ex2.h"
-#include "math.h"
+//#include "math.h"
+
+int pow(int i){
+    return 1 << i;
+}
+
+int abs(x){
+    if (x<0){ x= -x;}
+    return x;
+
+}
 
 magnitude fromTwoComplementsToMagnitude(int x){
     int value = 0;
     for (int i =0; i < 31; i++){
         if (abs(x) % 2 == 1){
-            value += pow(2, i);
+            value += pow(i);
         }
         x = x >> 1;
     }
@@ -23,7 +33,7 @@ int fromMagnitudeToTwoComplements(magnitude x) {
     int result = 0;
     for (int i = 0; i < 31; i++) {
         if (abs(x) % 2 == 0) {
-            result += pow(2, i);
+            result += pow(i);
         }
         x = x >> 1;
     }
