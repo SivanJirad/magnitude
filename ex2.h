@@ -9,7 +9,7 @@ typedef magnitude;
 int print_magnitude(magnitude x);
 
 magnitude add(magnitude a, magnitude b); // a + b
-/*
+
 magnitude sub(magnitude a, magnitude b); // a - b
 magnitude multi(magnitude a, magnitude b); // a * b
 
@@ -17,6 +17,6 @@ magnitude multi(magnitude a, magnitude b); // a * b
 int equal(magnitude a, magnitude b); // a = b
 int greater(magnitude a, magnitude b); // a > b
 
-*/
+
 #endif //UNTITLED2_EX2_H
 
