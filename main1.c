@@ -6,6 +6,15 @@
 int main()
 {
 
+    printf("%d\n", multi(-0, -0));
+    printf("%d\n", add(-0, -0));
+    printf("%d\n", sub(-0, -0));
+    printf("%d\n", equal(0, 0));
+    printf("%d\n", greater(5, -0));
+    printf("%d\n", multi(0, add(0, -0)));
+
+    printf("***************************************************************************");
+
     printf("%d\n", add(-1, 4));
     printf("%d\n", add(3, 5));
     printf("%d\n", add(-9, -7));

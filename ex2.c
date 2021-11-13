@@ -1,7 +1,7 @@
 // 209193481 Sivan Jhirad
 
 #include "ex2.h"
-//#include "math.h"
+
 
 int pow(int i){
     return 1 << i;
