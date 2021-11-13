@@ -1,8 +1,5 @@
-//
-// Created by sivan Jhirad on 13/11/2021.
-//
+// 209193481 Sivan Jhirad
 
-#include <stdio.h>
 #include "ex2.h"
 #include "math.h"
 
@@ -19,7 +16,6 @@ magnitude fromTwoComplementsToMagnitude(int x){
     }
     return value;
 }
-
 
 int fromMagnitudeToTwoComplements(magnitude x) {
     x=-x;
@@ -38,13 +34,12 @@ magnitude add(magnitude a, magnitude b) {
     a = fromTwoComplementsToMagnitude(a);
     b = fromTwoComplementsToMagnitude(b);
     int result = a + b;
-    if (result < 0) {
-        result = fromMagnitudeToTwoComplements(result);
-        if (a < 0 || b < 0) {
-            result = -result;
-        }
+    if (a < 0 || b < 0) {
+        result = -fromMagnitudeToTwoComplements(result);
     }
-
+    else if (result < 0 ) {
+        result = fromMagnitudeToTwoComplements(result);
+    }
     return result;
 
 }
@@ -53,7 +48,10 @@ magnitude sub(magnitude a, magnitude b) {
     a = fromTwoComplementsToMagnitude(a);
     b = fromTwoComplementsToMagnitude(b);
     int result = a - b;
-    if (result < 0) {
+    if (a < b) {
+        result = -fromMagnitudeToTwoComplements(result);
+    }
+    else if (result < 0 ) {
         result = fromMagnitudeToTwoComplements(result);
     }
     return result;
@@ -63,18 +61,15 @@ magnitude multi(magnitude a, magnitude b) {
     a = fromTwoComplementsToMagnitude(a);
     b = fromTwoComplementsToMagnitude(b);
     int result = a * b;
-    if (result < 0) {
+    if( (a > 0 && b> 0) ||(a <0 && b <0)){
         result = fromMagnitudeToTwoComplements(result);
-        if (a < 0 || b < 0) {
-            result = -result;
-        }
+    }else {
+        result = -fromMagnitudeToTwoComplements(result);
     }
-
     return result;
 
 }
 
-// true = 1, false = 0
 int equal(magnitude a, magnitude b) {
     a = fromTwoComplementsToMagnitude(a);
     b = fromTwoComplementsToMagnitude(b);

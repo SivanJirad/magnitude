@@ -1,15 +1,12 @@
+// 209193481 Sivan Jhirad
 
 #ifndef UNTITLED2_EX2_H
 #define UNTITLED2_EX2_H
 
 typedef magnitude;
 
-#define MAX_NUMBER 2147483647;
-#define MIN_NUMBER -2147483647;
-int print_magnitude(magnitude x);
 
 magnitude add(magnitude a, magnitude b); // a + b
-
 magnitude sub(magnitude a, magnitude b); // a - b
 magnitude multi(magnitude a, magnitude b); // a * b
 
@@ -19,4 +16,3 @@ int greater(magnitude a, magnitude b); // a > b
 
 
 #endif //UNTITLED2_EX2_H
-
