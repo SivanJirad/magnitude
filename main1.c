@@ -5,8 +5,12 @@
 
 int main()
 {
+    printf("%d\n",add(1,1));
     printf("%d\n", add(2147483647,2147483647));
-    printf("%d\n", add(14,17));
+    printf("%d\n",add(-6,1));
+    //int x = add(-6,1);
+
+    //printf("%d\n",print_magnitude(x));
 
 
     //maxMin();

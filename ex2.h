@@ -6,7 +6,7 @@ typedef magnitude;
 
 #define MAX_NUMBER 2147483647;
 #define MIN_NUMBER -2147483647;
-
+int print_magnitude(magnitude x);
 
 magnitude add(magnitude a, magnitude b); // a + b
 /*
